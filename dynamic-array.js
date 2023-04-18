@@ -1,18 +1,21 @@
 class DynamicArray {
 
   constructor(defaultSize = 4) {
+    this.capacity = defaultSize;
+    this.length = 0;
+    this.data = new Array(defaultSize)
 
-    // Your code here
   }
 
   read(index) {
+    if (index >= this.length) return undefined;
+    return this.data[index];
 
-    // Your code here
   }
 
   push(val) {
-
-    // Your code here
+    this.data[this.length] = val
+    this.length++
   }
 
 
